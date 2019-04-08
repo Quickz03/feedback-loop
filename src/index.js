@@ -16,6 +16,9 @@ const feelingReducer = (state = '', action) => {
         console.log('ADDING FEELINGS');
         return action.payload
     }
+    if (action.type === "EMPTY") {
+        return state = '';
+    }
     // If it isn't this reducer's action, just return what came in as state
     // no changes so no need to update state and cause re-render
     return state;
@@ -27,6 +30,9 @@ const understandingReducer = (state = '', action) => {
         console.log('ADDING UNDERSTANDINGS');
         return action.payload
     }
+    if (action.type === "EMPTY") {
+        return state = '';
+    }
     return state;
 }
 
@@ -36,6 +42,9 @@ const supportReducer = (state = '', action) => {
         console.log('ADDING SUPPORT');
         return action.payload
     }
+    if (action.type === "EMPTY") {
+        return state = '';
+    }
     return state;
 }
 
@@ -44,6 +53,9 @@ const commentReducer = (state = '', action) => {
     if (action.type === 'ADD_COMMENT') {
         console.log('ADDING COMMENT');
         return action.payload
+    }
+    if (action.type === "EMPTY") {
+        return state = '';
     }
     return state;
 }
