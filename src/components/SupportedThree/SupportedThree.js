@@ -12,7 +12,7 @@ class SupportedThree extends Component {
     supported: '',
   }
 
-  handleChange = (event) => {
+  handleChangeFor = (event) => {
     console.log('in HandleChange');
     this.setState({
       supported: event.target.value
@@ -20,6 +20,7 @@ class SupportedThree extends Component {
   }
 
   handleClick = () => {
+    // Dispatch an action to our reducers to update our redux store 
     const action = {
       type: "ADD_SUPPORT",
       payload: this.state.supported
@@ -37,7 +38,7 @@ class SupportedThree extends Component {
                 <label>feeling?</label>
                 <br/>
                   <input type="number" name="supported" min="0" max="5"
-                      onChange={this.handleChange}></input>
+                      onChange={this.handleChangeFor}></input>
                         <button onClick={this.handleClick}>Next</button>
 
             <ReviewFive />

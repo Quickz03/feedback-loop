@@ -19,6 +19,7 @@ class FeelingOne extends Component {
   }
 
   handleClick = () => {
+    // Dispatch an action to our reducers to update our redux store 
     const action = {
       type: "ADD_FEELINGS",
       payload: this.state.feeling
@@ -32,13 +33,11 @@ class FeelingOne extends Component {
       <div className="App">
           <section>
             <h1>How are you feeling today?</h1>
-
                 <label>feeling?</label>
                 <br/>
                   <input type="number" name="feeling" min="0" max="5"
                     onChange={this.handleChangeFor}></input>
                       <button onClick={this.handleClick}>Next</button>
-
               <ReviewFive />
           </section>
         <br/>

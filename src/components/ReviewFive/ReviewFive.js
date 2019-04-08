@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 
 class ReviewFive extends Component {
-
+  // made a function to flip between incomplete and complete based on how much feedback is filled out
   buttonDisplay = () => {
     console.log(this.props.reduxState.commentReducer);
     if (this.props.reduxState.commentReducer.length === 0) {

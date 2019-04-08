@@ -15,10 +15,12 @@ import ThankYouSix from '../ThankYouSix/ThankYouSix';
 
 class App extends Component {
 
+   // Called when the (App) component is created
   state = {
     feedbackList: [],
   }
 
+  // This will post all our feedback to the server/database
   postFeedback = () => {
     console.log('in postFeedback');
     axios({
@@ -32,10 +34,12 @@ class App extends Component {
         }
       })
       .then((response) => {
+        // Dispatch an action to our reducers to update our redux store 
         const action = {
           type: 'EMPTY'
         };
         this.props.dispatch(action);
+        // TODO - GET feedback
         this.getFeedback();
       })
       .catch((error) => {
@@ -44,7 +48,7 @@ class App extends Component {
       })
   }
 
-
+  // This will get all our feedback from the server/database
   getFeedback = () => {
     console.log('in getFeedback');
     axios({

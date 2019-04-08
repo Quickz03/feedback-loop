@@ -7,16 +7,21 @@ import {createStore, combineReducers, applyMiddleware} from 'redux';
 import logger from 'redux-logger';
 
 
-
+// Going into my reducer function we have the previous state & an action
+// need to return back what the new state should be
 const feelingReducer = (state = '', action) => {
+    // No need to spread, because we are getting a new array from server 
+    // and it has all the things we want in it (don't want doubles)
     if (action.type === 'ADD_FEELINGS') {
         console.log('ADDING FEELINGS');
         return action.payload
     }
+    // If it isn't this reducer's action, just return what came in as state
+    // no changes so no need to update state and cause re-render
     return state;
 }
 
-
+// ""
 const understandingReducer = (state = '', action) => {
     if (action.type === 'ADD_UNDERSTANDING') {
         console.log('ADDING UNDERSTANDINGS');
@@ -25,6 +30,7 @@ const understandingReducer = (state = '', action) => {
     return state;
 }
 
+//""
 const supportReducer = (state = '', action) => {
     if (action.type === 'ADD_SUPPORT') {
         console.log('ADDING SUPPORT');
@@ -33,6 +39,7 @@ const supportReducer = (state = '', action) => {
     return state;
 }
 
+// ""
 const commentReducer = (state = '', action) => {
     if (action.type === 'ADD_COMMENT') {
         console.log('ADDING COMMENT');

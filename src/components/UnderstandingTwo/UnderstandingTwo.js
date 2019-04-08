@@ -12,7 +12,7 @@ class UnderstandingTwo extends Component {
     understanding: '',
   }
 
-  handleChange = (event) => {
+  handleChangeFor = (event) => {
     console.log('in HandleChange');
     this.setState({
       understanding: event.target.value
@@ -20,6 +20,7 @@ class UnderstandingTwo extends Component {
   }
 
   handleClick = () => {
+    // Dispatch an action to our reducers to update our redux store 
     const action = {
       type: "ADD_UNDERSTANDING",
       payload: this.state.understanding
@@ -37,7 +38,7 @@ class UnderstandingTwo extends Component {
                 <label>understanding?</label>
                 <br/>
                   <input type="number" name="understanding" min="0" max="5"
-                      onChange={this.handleChange}></input>
+                      onChange={this.handleChangeFor}></input>
                         <button onClick={this.handleClick}>Next</button>
             <ReviewFive />
           </section>
