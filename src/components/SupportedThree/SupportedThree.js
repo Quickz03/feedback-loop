@@ -12,6 +12,7 @@ class SupportedThree extends Component {
     supported: '',
   }
 
+  // runs the handlechange function to submit the data of the value in the input
   handleChangeFor = (event) => {
     console.log('in HandleChange');
     this.setState({
@@ -35,17 +36,15 @@ class SupportedThree extends Component {
       <div className="App">
           <section>
             <h1>How well are ytou being supported?</h1>
-                <label>feeling?</label>
+                <label>feeling? 1-5</label>
                 <br/>
                   <input type="number" name="supported" min="0" max="5"
                       onChange={this.handleChangeFor}></input>
                         <button onClick={this.handleClick}>Next</button>
-
             <ReviewFive />
           </section>
         <br/>
-      </div>
-    
+      </div>   
     );
   }
 }

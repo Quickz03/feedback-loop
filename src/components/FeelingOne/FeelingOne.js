@@ -11,6 +11,7 @@ class FeelingOne extends Component {
     feeling: '',
   }
 
+  // runs the handlechange function to submit the data of the value in the input
   handleChangeFor = (event) => {
     console.log('in HandleChange');
     this.setState({
@@ -33,7 +34,7 @@ class FeelingOne extends Component {
       <div className="App">
           <section>
             <h1>How are you feeling today?</h1>
-                <label>feeling?</label>
+                <label>feeling? 1-5</label>
                 <br/>
                   <input type="number" name="feeling" min="0" max="5"
                     onChange={this.handleChangeFor}></input>

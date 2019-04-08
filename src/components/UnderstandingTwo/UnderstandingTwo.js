@@ -11,7 +11,7 @@ class UnderstandingTwo extends Component {
   state = {
     understanding: '',
   }
-
+  // runs the handlechange function to submit the data of the value in the input
   handleChangeFor = (event) => {
     console.log('in HandleChange');
     this.setState({
@@ -35,7 +35,7 @@ class UnderstandingTwo extends Component {
       <div className="App">
           <section>
             <h1>How well are you understanding the content?</h1>
-                <label>understanding?</label>
+                <label>understanding? 1-5</label>
                 <br/>
                   <input type="number" name="understanding" min="0" max="5"
                       onChange={this.handleChangeFor}></input>

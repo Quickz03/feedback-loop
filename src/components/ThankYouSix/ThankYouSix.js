@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 
 class ThankYouSix extends Component {
 
+  // onClick run the function to push to the selected page
   handleClick = () => {
     this.props.history.push('/');
   }

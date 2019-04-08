@@ -12,6 +12,7 @@ class CommentsFour extends Component {
     comments: '',
   }
 
+  // runs the handlechange function to submit the data of the value in the input
   handleChangeFor = (event) => {
     console.log('in HandleChange');
     this.setState({
@@ -35,13 +36,11 @@ class CommentsFour extends Component {
       <div className="App">
           <section>
             <h1>Any comments you want to leave?</h1>
-
                 <label>comments?</label>
                 <br/>
                   <input type="text" name="comments" 
                       onChange={this.handleChangeFor}></input>
                         <button onClick={this.handleClick}>Next</button>
-
             <ReviewFive />
           </section>
         <br/>
